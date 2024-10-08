@@ -1,0 +1,92 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Grid Layout on Body */
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "main sidebar"
+        "footer footer";
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    text-align: center;
+    padding: 2em;
+    width : 100%;
+    background: #63B3ED;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    img{
+        border-radius: 50%;
+    }
+}
+
+header h1 {
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Main Content */
+main {
+    grid-area: main;
+    padding: 3em;
+    text-align: justify;
+}
+
+main h2 {
+    font-size: 32px;
+    color: #48BB78;
+}
+
+main h4 {
+    color: #718096;
+}
+
+.float-left {
+    float: left;
+    width: 200px;
+    margin: 0 15px 15px 0; /* Adds spacing around the image */
+}
+
+.float-right {
+    float: right;
+    width: 200px;
+    margin: 0 10px 15px 0; /* Adds spacing around the image */
+}
+
+/* Sidebar */
+aside {
+    grid-area: sidebar;
+    padding: 3em;
+    background: #E2E8F0;
+}
+
+aside h1 {
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+aside h3 {
+    color: #48BB78;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    padding: 2em;
+    background: #2C5282;
+    color: #FFFFFF;
+    text-align: center;
+}
